@@ -18,9 +18,10 @@ export default function App() {
   if (!fontLoaded) {
     return (
       <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setFontLoaded(true)}
-      />
+    startAsync={fetchFonts}
+    onFinish={() => setFontLoaded(true)}
+    onError={(err) => console.log(err)}
+  />
     );
   }
 
